@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TopDownCameraMovement : MonoBehaviour
 {
-    [SerializeField] Transform TargetTransform;
+    public Transform targetTransform;
     private Camera camera;
 
     private void Awake()
@@ -14,6 +14,6 @@ public class TopDownCameraMovement : MonoBehaviour
 
     private void LateUpdate()
     {
-        camera.transform.position = TargetTransform.position;
+        if(targetTransform != null) camera.transform.position = targetTransform.position;
     }
 }
