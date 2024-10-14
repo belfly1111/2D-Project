@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject titlePanel;
     [SerializeField] private GameObject characterSelectPanel;
+    [SerializeField] private GameObject inGamePanel;
     [SerializeField] private TMP_InputField playerInputNameField;
 
     private void Awake()
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
     {
         titlePanel.SetActive(false);
         characterSelectPanel.SetActive(false);
+        inGamePanel.SetActive(true);
 
         GameObject player = Instantiate(playerPrefabs[index], new Vector3(0, 0, -5), Quaternion.identity);
 
